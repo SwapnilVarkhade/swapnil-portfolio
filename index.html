@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Swapnil Varkhade — QA Engineer portfolio showcasing manual testing, automation testing, API testing and QA projects.">
+<title>Swapnil Varkhade | QA Engineer Portfolio</title>
+<style>
+:root{--bg:#090e1a;--panel:#111a2b;--panel2:#0d1524;--text:#edf3ff;--muted:#a5b2c8;--line:#24324a;--blue:#65a8ff;--cyan:#59e1dc;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 15% 0%,#142544 0,transparent 38%),var(--bg);color:var(--text);font-family:Inter,Segoe UI,Arial,sans-serif;line-height:1.65}
+a{color:inherit;text-decoration:none}.wrap{width:min(1100px,calc(100% - 40px));margin:auto}
+header{position:sticky;top:0;z-index:10;background:#090e1add;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav{height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:800;letter-spacing:.2px}.brand span{color:var(--cyan)}.navlinks{display:flex;gap:22px;color:var(--muted);font-size:14px}.navlinks a:hover{color:var(--cyan)}
+.menu{display:none;background:none;color:var(--text);border:1px solid var(--line);border-radius:8px;padding:7px 10px}
+.hero{padding:90px 0 76px;display:grid;grid-template-columns:1.35fr .65fr;gap:45px;align-items:center;min-height:570px}
+.eyebrow{color:var(--cyan);font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase}
+h1{font-size:clamp(42px,6vw,68px);line-height:1.08;margin:15px 0 18px;letter-spacing:-2px}.gradient{background:linear-gradient(90deg,var(--blue),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--muted);font-size:18px;max-width:650px}.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:10px;font-weight:700;font-size:14px;border:1px solid var(--line);transition:.2s}.primary{background:linear-gradient(110deg,#347ee7,#28b8bd);border:0;color:#06111e}.btn:hover{transform:translateY(-2px)}
+.hero-card{background:linear-gradient(150deg,#172945,#101a2a);border:1px solid #2b4262;border-radius:24px;padding:30px;box-shadow:0 24px 70px #0005}
+.avatar{width:82px;height:82px;border-radius:22px;display:grid;place-items:center;background:linear-gradient(135deg,#367fe5,#4ad6cf);font-size:30px;font-weight:900;color:#06111e;margin-bottom:22px}
+.hero-card h3{margin:0 0 5px;font-size:21px}.hero-card p{color:var(--muted);margin:0 0 18px}.statrow{display:grid;grid-template-columns:1fr 1fr;gap:10px}.stat{background:#0b1423;border:1px solid var(--line);border-radius:12px;padding:13px}.stat strong{display:block;font-size:21px;color:var(--cyan)}.stat small{color:var(--muted)}
+section{padding:65px 0;scroll-margin-top:70px}.section-head{margin-bottom:28px}.section-head .eyebrow{margin-bottom:5px}h2{font-size:32px;letter-spacing:-.7px;margin:0}.sub{color:var(--muted);margin:8px 0 0}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.card{background:linear-gradient(145deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:16px;padding:23px}.card h3{margin:0 0 9px;font-size:19px}.card p{margin:0;color:var(--muted)}.card .icon{font-size:22px;margin-bottom:12px}
+.skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.tag{padding:7px 12px;border:1px solid #2c4665;background:#13243a;border-radius:999px;color:#c9dcf7;font-size:13px}
+.timeline{border-left:1px solid #355174;margin-left:8px;padding-left:25px}.timeline-item{position:relative;margin:0 0 25px}.timeline-item:before{content:"";position:absolute;left:-31px;top:7px;width:11px;height:11px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 5px #59e1dc20}.meta{color:var(--cyan);font-size:13px;font-weight:700}.timeline-item h3{margin:4px 0}.timeline-item p{color:var(--muted);margin:0}
+.project{display:flex;flex-direction:column;min-height:100%}.project .type{color:var(--cyan);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:1px}.project h3{margin:9px 0}.project p{flex:1}.project ul{color:var(--muted);padding-left:19px;margin:12px 0 0}.project li{margin:4px 0}
+.contactbox{background:linear-gradient(120deg,#142945,#10202d);border:1px solid #2a4967;border-radius:20px;padding:30px;display:flex;justify-content:space-between;gap:25px;align-items:center}.contactbox p{color:var(--muted);margin:5px 0 0}.contactlinks{display:flex;gap:10px;flex-wrap:wrap}
+footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:13px}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.note{font-size:12px;color:#8292aa;margin-top:16px}
+@media(max-width:760px){.hero{grid-template-columns:1fr;padding:65px 0 45px;gap:25px}.navlinks{display:none;position:absolute;top:69px;left:0;right:0;background:#0b1220;padding:18px 22px;border-bottom:1px solid var(--line);flex-direction:column}.navlinks.open{display:flex}.menu{display:block}.grid{grid-template-columns:1fr}.contactbox{align-items:flex-start;flex-direction:column}section{padding:48px 0}.wrap{width:min(100% - 30px,1100px)}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+<a class="brand" href="#home">SWAPNIL<span>.</span></a>
+<button class="menu" aria-label="Toggle navigation" onclick="document.querySelector('.navlinks').classList.toggle('open')">☰</button>
+<div class="navlinks">
+<a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+</div>
+</nav></div></header>
+<main>
+<div class="wrap hero" id="home">
+<div>
+<div class="eyebrow">QA Engineer · Manual & Automation Testing</div>
+<h1>Hi, I'm <span class="gradient">Swapnil Varkhade</span></h1>
+<p class="lead">I help deliver reliable software through thoughtful test design, hands-on testing, clear defect reporting, and practical test automation.</p>
+<div class="actions">
+<a class="btn primary" href="#projects">Explore my work ↗</a>
+<a class="btn" href="mailto:varkhadeswapnil1997@gmail.com">Contact me</a>
+<a class="btn" href="https://github.com/SwapnilVarkhade" target="_blank" rel="noopener">GitHub ↗</a>
+</div>
+</div>
+<aside class="hero-card">
+<div class="avatar">SV</div>
+<h3>QA Analyst</h3><p>Software Quality Assurance</p>
+<div class="statrow">
+<div class="stat"><strong>~2 yrs</strong><small>Testing experience</small></div>
+<div class="stat"><strong>4 areas</strong><small>Manual · UI · API · Mobile</small></div>
+</div>
+<p class="note">Based in Pune, Maharashtra, India</p>
+</aside>
+</div>
+
+<section id="about"><div class="wrap">
+<div class="section-head"><div class="eyebrow">Introduction</div><h2>About Me</h2><p class="sub">A quality-focused tester with a practical, collaborative approach.</p></div>
+<div class="card"><p>I am a QA Analyst with approximately 2 years of experience in software testing. My work includes testing web-based applications and ERP workflows, understanding business requirements, preparing test scenarios and test cases, executing tests, reporting defects, and validating fixes. I also have exposure to automation testing with Selenium and Java, API testing with Postman, and database validation using SQL. I enjoy investigating issues, improving test coverage, and working with teams to release dependable software.</p></div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+<div class="section-head"><div class="eyebrow">What I work with</div><h2>Skills & Tools</h2><p class="sub">Core testing practices and tools used across my QA work.</p></div>
+<div class="grid">
+<div class="card"><div class="icon">🧪</div><h3>Manual Testing</h3><p>Requirement analysis, test design, execution, defect lifecycle, and release validation.</p><div class="skills"><span class="tag">Functional</span><span class="tag">Regression</span><span class="tag">Integration</span><span class="tag">Smoke & Sanity</span><span class="tag">UAT</span><span class="tag">End-to-End</span></div></div>
+<div class="card"><div class="icon">⚙️</div><h3>Automation Testing</h3><p>Web UI automation and maintainable test structure.</p><div class="skills"><span class="tag">Selenium WebDriver</span><span class="tag">Java</span><span class="tag">TestNG</span><span class="tag">Maven</span><span class="tag">POM</span><span class="tag">Data-Driven Testing</span></div></div>
+<div class="card"><div class="icon">🔌</div><h3>API & Database Testing</h3><p>Service validation and backend data checks.</p><div class="skills"><span class="tag">Postman</span><span class="tag">REST API</span><span class="tag">SQL</span><span class="tag">Database Validation</span></div></div>
+<div class="card"><div class="icon">📋</div><h3>QA Process & Tools</h3><p>Structured test delivery in collaborative development teams.</p><div class="skills"><span class="tag">Jira</span><span class="tag">STLC</span><span class="tag">SDLC</span><span class="tag">Agile</span><span class="tag">Test Cases</span><span class="tag">Defect Reporting</span><span class="tag">RTM</span></div></div>
+</div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+<div class="section-head"><div class="eyebrow">Career</div><h2>Experience</h2></div>
+<div class="card">
+<div class="timeline">
+<div class="timeline-item"><div class="meta">December 2024 – Present · Pune, India</div><h3>QA Analyst · SunOne Technologies Pvt. Ltd.</h3><p>Testing ERP and web application workflows across business modules. Responsibilities include understanding requirements, preparing and executing test cases, functional and regression testing, defect reporting and retesting, API checks, database validation, and supporting automation activities.</p></div>
+<div class="timeline-item"><div class="meta">Initial 6 months · QA Internship</div><h3>QA Intern</h3><p>Built practical experience in software testing processes, test execution, defect identification, and collaboration with the development team before transitioning to the QA Analyst role.</p></div>
+</div>
+</div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+<div class="section-head"><div class="eyebrow">Selected work</div><h2>Projects</h2><p class="sub">Examples of product areas and testing activities I have worked on.</p></div>
+<div class="grid">
+<div class="card project"><div class="type">ERP · Manual, Automation & API Testing</div><h3>ERP Workflow Testing</h3><p>Quality assurance for interconnected enterprise workflows and business operations.</p><ul><li>Covered Sales, Purchase, Invoice, Inventory, and Manufacturing modules.</li><li>Prepared scenarios and test cases from business requirements.</li><li>Performed positive, negative, regression, and end-to-end testing.</li><li>Validated APIs and database records; logged and retested defects.</li></ul><div class="skills"><span class="tag">Selenium</span><span class="tag">Java</span><span class="tag">Postman</span><span class="tag">SQL</span><span class="tag">Jira</span></div></div>
+<div class="card project"><div class="type">Mobile App · QA Assignment</div><h3>StarWarsApp Testing</h3><p>Functional and usability testing of a React Native mobile application using Star Wars API data.</p><ul><li>Reviewed registration, login, profile photo, and navigation flows.</li><li>Considered Android/iOS compatibility, screen orientations, and permissions.</li><li>Documented reproducible defects with expected and actual results.</li><li>Assessed usability and key security and performance considerations.</li></ul><div class="skills"><span class="tag">Mobile Testing</span><span class="tag">Functional Testing</span><span class="tag">Bug Reporting</span><span class="tag">Compatibility</span></div></div>
+</div>
+<p class="note">Project summaries are representative descriptions. Add public repositories, screenshots, or sanitized test artifacts when ready. Do not publish confidential company information.</p>
+</div></section>
+
+<section id="contact"><div class="wrap">
+<div class="section-head"><div class="eyebrow">Get in touch</div><h2>Let's connect</h2><p class="sub">Open to QA Engineer, Manual Tester, and Automation Tester opportunities.</p></div>
+<div class="contactbox"><div><h3 style="margin:0">Swapnil Varkhade</h3><p>Pune, Maharashtra, India · QA Analyst</p><p><a href="mailto:varkhadeswapnil1997@gmail.com">varkhadeswapnil1997@gmail.com</a></p></div>
+<div class="contactlinks"><a class="btn primary" href="mailto:varkhadeswapnil1997@gmail.com">Email me ↗</a><a class="btn" href="https://www.linkedin.com/in/swapnil-varkhade-959201274/" target="_blank" rel="noopener">LinkedIn ↗</a><a class="btn" href="https://github.com/SwapnilVarkhade" target="_blank" rel="noopener">GitHub ↗</a></div></div>
+</div></section>
+</main>
+<footer><div class="wrap foot"><span>© <span id="year"></span> Swapnil Varkhade. All rights reserved.</span><span>Built to showcase quality, one test at a time.</span></div></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.navlinks').classList.remove('open')));</script>
+</body></html>
